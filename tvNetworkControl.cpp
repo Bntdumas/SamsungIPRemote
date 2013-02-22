@@ -9,7 +9,6 @@ tvNetworkControl::tvNetworkControl(QObject *parent) :
     m_socket(0),
     m_connected(false)
 {
-
 }
 
 void tvNetworkControl::connectToTV(const QString & ip)
