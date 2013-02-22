@@ -16,7 +16,6 @@ public:
     void sendIDPacket(const QString &remoteIP, const QString &ID, const QString &name);
     void sendRaw(const QByteArray &data);
     void sendKey(const QString &key);
-    QString byteArrayToHexaString(const QByteArray &array, bool needHexConversion = true);
 private slots:
     void sltReadyRead();
     void sltConnected();
@@ -30,6 +29,7 @@ private:
     bool m_connected;
     QByteArray encodeString(const QString &str);
 
+    QString byteArrayToHexaString(const QByteArray &array, bool needHexConversion = true) const;
 
 };
 

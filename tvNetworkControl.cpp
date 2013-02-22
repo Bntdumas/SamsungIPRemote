@@ -129,7 +129,7 @@ void tvNetworkControl::sendRaw(const QByteArray &data)
     }
 }
 
-QString tvNetworkControl::byteArrayToHexaString(const QByteArray &array, bool needHexConversion)
+QString tvNetworkControl::byteArrayToHexaString(const QByteArray &array, bool needHexConversion) const
 {
     QString hex;
     if (needHexConversion) {
