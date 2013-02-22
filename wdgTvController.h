@@ -9,6 +9,11 @@ class wdgTvController;
 
 class tvNetworkControl;
 
+
+/**
+ * @brief Little gui utility to test the Samsung TV IP controller.
+ */
+
 class wdgTvController : public QWidget
 {
     Q_OBJECT
