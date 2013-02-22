@@ -26,8 +26,6 @@ private slots:
     void on_ctlIP_returnPressed();
     void on_btConnect_clicked();
     void on_btSendID_clicked();
-
-
     void on_btSendKey_clicked();
 
 private:
