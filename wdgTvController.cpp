@@ -13,6 +13,7 @@ wdgTvController::wdgTvController(QWidget *parent) :
     m_tvController = new tvNetworkControl(this);
     connect(m_tvController, SIGNAL(logText(QString)), ui->txtEditInformations, SLOT(appendHtml(QString)));
 
+    // key codes found here: http://wiki.samygo.tv/index.php5/D-Series_Key_Codes
     QFile file(":/samsungKeyCodes.txt");
     if (file.open(QIODevice::ReadOnly | QIODevice::Text))   {
         while (!file.atEnd()) {
