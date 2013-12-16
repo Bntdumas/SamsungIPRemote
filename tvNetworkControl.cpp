@@ -91,7 +91,13 @@ void tvNetworkControl::sendIDPacket(const QString &remoteIP, const QString &ID, 
 
 void tvNetworkControl::sendKey(const QString &key)
 {
+
+#ifdef QT5
+    QByteArray keyByteArray(key.toLatin1());
+#else
     QByteArray keyByteArray(key.toAscii());
+#endif
+
     keyByteArray = keyByteArray.toBase64();
 
     const char rawKeyPacketStart[] = {
