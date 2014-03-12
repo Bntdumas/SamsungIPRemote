@@ -166,7 +166,12 @@ QString tvNetworkControl::byteArrayToHexaString(const QByteArray &array, bool ne
 
 QByteArray tvNetworkControl::encodeString(const QString &str)
 {
+#ifdef QT5
+    const QByteArray strBase64 = QByteArray(str.toLatin1()).toBase64();
+#else
     const QByteArray strBase64 = QByteArray(str.toAscii()).toBase64();
+#endif
+
     const qint16 strSize = strBase64.size();
     QByteArray encodedStr;
     QDataStream stream(&encodedStr, QIODevice::WriteOnly);
