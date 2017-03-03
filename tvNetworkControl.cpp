@@ -3,6 +3,7 @@
 #include <QTcpSocket>
 #include <QStringList>
 #include <QtEndian>
+#include <QDataStream>
 
 tvNetworkControl::tvNetworkControl(QObject *parent) :
     QObject(parent),
